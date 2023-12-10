@@ -1,0 +1,151 @@
+@font-face {
+    font-family: cooper;
+    src: url(./CooperLtBTLight.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cooper;
+}
+
+html,
+body{
+    height:100%;
+    width :100%;
+    margin: 0;
+    /* position: absolute; */
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    padding: 0px 30px;
+    position: fixed;
+    top: 0;
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav h1{
+    font-size: 30px;
+}
+#nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav #part2 a{
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+}
+#nav #part2 i{
+    width:10px;
+}
+#nav #part2 a:nth-last-child(1){
+    /* aceessing the last contact a tag using nth last child*/
+    /* background-color: lightgreen; */
+    padding: 7px 18px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+#nav #part2 a:nth-last-child(1) h5{
+    position: relative;
+    z-index: 99;
+}
+#nav #part2 a:nth-last-child(1) #green{
+    width: 100%;
+    background-color:springgreen ;
+    position: absolute;
+    top:0%;
+    left: -100%;
+    height: 100%;
+    transition: left 0.4s;
+}
+#nav #part2 a:nth-last-child(1):hover #green{
+    left: 0;
+}
+
+
+#main>h1{
+    font-size: 5.4vw;
+    font-weight: 50;  
+    width: 60%;
+    position: relative;
+    text-align: center;  
+    text-transform: capitalize;
+    z-index: 99;
+}
+ #main>h1::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 20px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    /* background-color: red; */
+    bottom:-5% ;
+    left: 50%;
+    background-size: cover;
+    transform: translate(-50%,0); 
+} 
+#main #img1{
+    height: 500px;
+    width: 300px;
+    position: absolute;
+    left: 7%;
+    top: 20%;
+}
+#main #img2{
+    height: 300px;
+    width: 330px;
+    position: absolute;
+    right: 27%;
+    top: 18%;
+}
+#main #img3{
+    height: 250px;
+    width: 280px;
+    position: absolute;
+    right: 17%;
+    bottom: 6%;
+}
+#main img{
+    transition: margin 1s ease;
+}
+#main img:hover{
+    margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+    #nav {
+        padding: 10px; /* Further adjusted padding for smaller screens */
+    }
+
+    #nav h1 {
+        font-size: 20px;
+    }
+
+    #nav #part2 a {
+        margin: 5px;
+    }
+
+    #main > h1 {
+        font-size: 6vw;
+        margin-bottom: 20px; /* Add bottom margin on smaller screens */
+    }
+
+    #main img {
+        margin: 20px 0; /* Adjust margin for images on smaller screens */
+    }
+}
